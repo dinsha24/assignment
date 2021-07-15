@@ -1,7 +1,15 @@
 var ta=document.getElementById("textarea");
-window.addEventListener("beforeunload", function (e) {
-  var Msg = 'unsaved changes';
+textarea.addEventListener("i",function(e){
+  if (e.value==!""){
+    window.addEventListener("beforeunload", function (e) {
+      e.returnValue="unsaved changes";
 
-  (e || window.event).returnValue = Msg; 
-  return Msg; 
+  
+});
+  }
+
+  
+  
+
+ 
 });
